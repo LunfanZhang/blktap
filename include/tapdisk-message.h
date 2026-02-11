@@ -56,6 +56,7 @@
 #define TAPDISK_MESSAGE_FLAG_STANDBY     0x100
 #define TAPDISK_MESSAGE_FLAG_NO_O_DIRECT 0x200
 #define TAPDISK_MESSAGE_FLAG_OPEN_ENCRYPTED 0x400
+#define TAPDISK_MESSAGE_FLAG_ENABLE_FLUSH_CACHE 0x800
 
 typedef struct tapdisk_message           tapdisk_message_t;
 typedef uint32_t                         tapdisk_message_flag_t;
@@ -82,6 +83,7 @@ struct tapdisk_message_image {
 	uint64_t                         sectors;
 	uint32_t                         sector_size;
 	uint32_t                         info;
+	uint32_t                         enable_flush_cache;
 };
 
 struct tapdisk_message_string {
